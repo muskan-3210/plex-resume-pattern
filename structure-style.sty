@@ -1,0 +1,52 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{structure-style}
+
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{lmodern}
+
+% ===== Colors =====
+\definecolor{primary}{RGB}{0, 86, 179}
+
+% ===== Section Styling =====
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% ===== General Formatting =====
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+% ===== Custom Commands =====
+
+\hypersetup{
+    hidelinks
+}
+
+\newcommand{\resumeHeader}[8]{
+    {\LARGE \textbf{#1}} \\
+    #2 \\
+    #3 $|$ #4 $|$ \href{mailto:#5}{#5} \\
+    \href{https://#6}{#6} $|$ \href{https://#7}{#7}
+    \vspace{0.3cm}
+}
+
+\newcommand{\resumeItem}[2]{
+    \textbf{#1:} #2 \par
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \textbf{#1}, \text{#3} \hfill #2 
+}
+
+\newcommand{\resumeBullet}[1]{
+    \begin{itemize}[leftmargin=*]
+        \item #1
+    \end{itemize}
+}
+
+\newcommand{\resumeProject}[3]{
+    \textbf{#1} \hfill {\small \textit{#3}} \\
+    {\small \textit{#2}} 
+}
