@@ -1,4 +1,4 @@
-plex-resume-pattern
+# plex-resume-pattern
 
 I built an ATS-friendly LaTeX resume template for software engineers.
 
